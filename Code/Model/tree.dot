@@ -1,0 +1,16 @@
+digraph Tree {
+node [shape=box, style="filled", color="black"] ;
+0 [label="online_boarding <= 3.5\ngini = 0.492\nsamples = 90640\nvalue = [51212, 39428]\nclass = satisfied", fillcolor="#f9e2d1"] ;
+1 [label="inflight_wifi_service <= 0.5\ngini = 0.255\nsamples = 45493\nvalue = [38673, 6820]\nclass = satisfied", fillcolor="#ea975c"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="gini = 0.009\nsamples = 1537\nvalue = [7, 1530]\nclass = neutral or dissatisfied", fillcolor="#3a9de5"] ;
+1 -> 2 ;
+3 [label="gini = 0.212\nsamples = 43956\nvalue = [38666, 5290]\nclass = satisfied", fillcolor="#e99254"] ;
+1 -> 3 ;
+4 [label="type_of_travel <= 0.5\ngini = 0.401\nsamples = 45147\nvalue = [12539, 32608]\nclass = neutral or dissatisfied", fillcolor="#85c3ef"] ;
+0 -> 4 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+5 [label="gini = 0.254\nsamples = 35942\nvalue = [5370, 30572]\nclass = neutral or dissatisfied", fillcolor="#5caeea"] ;
+4 -> 5 ;
+6 [label="gini = 0.345\nsamples = 9205\nvalue = [7169, 2036]\nclass = satisfied", fillcolor="#eca571"] ;
+4 -> 6 ;
+}
